@@ -1,0 +1,19 @@
+@use 'variables' as var;
+
+:root {
+    --test: #fff;
+}
+
+html {
+    font-family: monospace;
+    background-color: var.$light-background-color;
+    color: var.$light-font-color;
+    &.dark {
+        background-color: var.$dark-background-color;
+        color: var.$dark-font-color;
+    }
+}
+
+body {
+    margin: 0;
+}

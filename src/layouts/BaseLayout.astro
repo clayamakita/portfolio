@@ -1,0 +1,14 @@
+---
+import "../styles/global.scss"
+import Head from "../components/Head.astro";
+import NavigationBar from "../components/NavigationBar.astro";
+import Footer from "../components/Footer.astro";
+---
+<html lang="en">
+	<Head title="SamWK Portfolio" />
+	<body>
+        <NavigationBar />
+		<slot />
+		<Footer />
+	</body>
+</html>

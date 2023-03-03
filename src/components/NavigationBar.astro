@@ -1,0 +1,56 @@
+---
+import DarkModeButton from "./DarkModeButton.astro";
+
+---
+
+<ul>
+    <li><a href="/portfolio/">SamWK</a></li>
+    <li><a href="/portfolio/projects/">Projects</a></li>
+    <li><a href="/portfolio/about/">About</a></li>
+    <li><DarkModeButton /></li>
+</ul>
+
+<style lang="scss">
+@use '../styles/variables' as var;
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var.$light-navigation-background-color;
+    z-index: 24;
+}
+
+li {
+    float: left;
+    
+    a {
+        color: var.$light-font-color;
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: var.$light-hover-background-color;
+        }
+    }
+}
+
+:global(.dark) {
+    ul {
+        background-color: var.$dark-navigation-background-color;
+    }
+    li a {
+        color: var.$dark-font-color;
+        &:hover {
+            background-color: var.$dark-hover-background-color;
+        }
+    }
+}
+
+.active {
+    color: #a8c7fa;
+}
+</style>

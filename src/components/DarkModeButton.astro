@@ -1,0 +1,67 @@
+<div id="darkModeToggle">
+    <span class="material-symbols-rounded">dark_mode</span>
+</div>
+
+<style lang="scss">
+@use '../styles/variables' as var;
+
+.material-symbols-rounded {
+    margin: 4px;
+    padding: 4px;
+    cursor: pointer;
+    border: 1px solid var.$light-font-color;
+    border-radius: 50%;
+    user-select: none;
+    
+    font-variation-settings:
+        'FILL' 0;
+    &:hover {
+        background-color: var.$light-hover-background-color;
+        font-variation-settings:
+            'FILL' 1;
+    }
+}
+
+:global(.dark) {
+    .material-symbols-rounded {
+        border: 1px solid var.$dark-font-color;
+        &:hover {
+            background-color: var.$dark-hover-background-color;
+        }
+    }
+}
+</style>
+
+<script>
+const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+        return localStorage.getItem('theme');
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+    }
+    return 'light';
+})();
+
+if (theme === 'light') {
+    document.documentElement.classList.remove('dark');
+    document.getElementById('darkModeToggle')!.getElementsByTagName('span')[0].innerHTML = 'dark_mode'
+} else {
+    document.documentElement.classList.add('dark');
+    document.getElementById('darkModeToggle')!.getElementsByTagName('span')[0].innerHTML = 'light_mode'
+}
+
+window.localStorage.setItem('theme', theme || 'dark');
+
+const handleToggleClick = () => {
+    document.documentElement.classList.toggle("dark");
+
+    const symbol = document.getElementById('darkModeToggle')!.getElementsByTagName('span')[0];
+    symbol.innerHTML = symbol.innerHTML == 'dark_mode' ? 'light_mode' : 'dark_mode';
+
+    const isDark = symbol.innerHTML == 'light_mode';
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+}
+
+document.getElementById("darkModeToggle")!.addEventListener("click", handleToggleClick);
+</script>
