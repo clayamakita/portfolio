@@ -1,9 +1,5 @@
 @use 'variables' as var;
 
-:root {
-    --test: #fff;
-}
-
 html {
     font-family: monospace;
     background-color: var.$light-background-color;
@@ -16,4 +12,7 @@ html {
 
 body {
     margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }

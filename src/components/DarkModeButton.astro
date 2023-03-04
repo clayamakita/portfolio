@@ -3,33 +3,33 @@
 </div>
 
 <style lang="scss">
-@use '../styles/variables' as var;
+    @use '../styles/variables' as var;
 
-.material-symbols-rounded {
-    margin: 4px;
-    padding: 4px;
-    cursor: pointer;
-    border: 1px solid var.$light-font-color;
-    border-radius: 50%;
-    user-select: none;
-    
-    font-variation-settings:
-        'FILL' 0;
-    &:hover {
-        background-color: var.$light-hover-background-color;
-        font-variation-settings:
-            'FILL' 1;
-    }
-}
-
-:global(.dark) {
     .material-symbols-rounded {
-        border: 1px solid var.$dark-font-color;
+        margin: 4px;
+        padding: 4px;
+        cursor: pointer;
+        border: 1px solid var.$light-font-color;
+        border-radius: 50%;
+        user-select: none;
+        
+        font-variation-settings:
+            'FILL' 0;
         &:hover {
-            background-color: var.$dark-hover-background-color;
+            background-color: var.$light-hover-background-color;
+            font-variation-settings:
+                'FILL' 1;
         }
     }
-}
+
+    :global(.dark) {
+        .material-symbols-rounded {
+            border: 1px solid var.$dark-font-color;
+            &:hover {
+                background-color: var.$dark-hover-background-color;
+            }
+        }
+    }
 </style>
 
 <script>
