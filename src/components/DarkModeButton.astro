@@ -22,12 +22,10 @@
         }
     }
 
-    :global(.dark) {
-        .material-symbols-rounded {
-            border: 1px solid var.$dark-font-color;
-            &:hover {
-                background-color: var.$dark-hover-background-color;
-            }
+    :global(.dark) .material-symbols-rounded {
+        border: 1px solid var.$dark-font-color;
+        &:hover {
+            background-color: var.$dark-hover-background-color;
         }
     }
 </style>

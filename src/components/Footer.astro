@@ -9,11 +9,24 @@
         background-color: var.$light-footer-background-color;
         display: flex;
         justify-content: center;
+        a {
+            color: var.$color-primary;
+            text-decoration: none;
+            &:hover {
+                color: var.$color-primary-20;
+                text-decoration: underline;
+            }
+        }
     }
 
     :global(.dark) { 
         footer {
             background-color: var.$dark-footer-background-color;
+            a {
+                &:hover {
+                    color: var.$color-primary-80;
+                }
+            }
         }
     }
 </style>
