@@ -8,15 +8,7 @@ import Footer from "../components/Footer.astro";
 	<Head title="SamWK Portfolio" />
 	<body>
         <NavigationBar />
-		<div class="content">
-			<slot />
-		</div>
+		<slot />
 		<Footer />
 	</body>
 </html>
-
-<style lang="scss">
-	.content {
-		flex: 1;
-	}
-</style>
