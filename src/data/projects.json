@@ -1,0 +1,45 @@
+{
+    "projects": [
+        {
+            "name": "Advent of Code",
+            "description": "It's an annual online programming challenge that takes place in December, featuring daily puzzles designed to challenge participants' problem-solving skills.",
+            "project-link": "",
+            "git-link": "https://github.com/wksam/adventofcode",
+            "technologies": [
+                "Python", "Javascript"
+            ]
+        }, {
+            "name": "LeetCode",
+            "description": "It's an online platform with a database of coding challenges to help people improve their coding skills and prepare for technical interviews.",
+            "project-link": "",
+            "git-link": "https://github.com/wksam/leetcode",
+            "technologies": [
+                "Javascript"
+            ]
+        }, {
+            "name": "App Ideas",
+            "description": "It's a website that provides practical project ideas for developers to improve their programming skills.",
+            "project-link": "https://wksam.github.io/app-ideas/",
+            "git-link": "https://github.com/wksam/app-ideas",
+            "technologies": [
+                "HTML", "CSS", "Javascript"
+            ]
+        }, {
+            "name": "Spoj",
+            "description": "It's an online platform with a large collection of programming problems in various domains, supporting over 50 programming languages, and providing statistics and rankings to track users' progress. It is widely used by competitive programmers to prepare for coding contests and interviews.",
+            "project-link": "",
+            "git-link": "https://github.com/wksam/spoj",
+            "technologies": [
+                "Python", "C#", "C++", "Go", "Java", "Javascript", "Others"
+            ]
+        }, {
+            "name": "Frontend Mentor",
+            "description": "It's an online platform that provides web design challenges for developers to improve their front-end development skills, with design files and assets provided. Users can submit their solutions for feedback and connect with the community to build their portfolio and gain practical experience.",
+            "project-link": "https://wksam.github.io/frontend-mentor/",
+            "git-link": "https://github.com/wksam/frontend-mentor",
+            "technologies": [
+                "HTML", "CSS"
+            ]
+        }
+    ]
+}

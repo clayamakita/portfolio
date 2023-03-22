@@ -1,0 +1,92 @@
+---
+import WorkSection from '../components/WorkSection.astro';
+import workData from '../data/work.json';
+
+function formatToId(name: string, index: number) {
+    return name.toLowerCase().replaceAll(' ', '-') + '-' + index;
+}
+---
+
+<section id="experience">
+    <h1 class="counter">Experience</h1>
+    <div class="container">
+        <aside>
+            <ul>
+                {workData.works.map((work, index) => <li><a href={"#" + formatToId(work['company-name'], index)}>{work['company-name']}</a></li>)}
+            </ul>
+        </aside>
+        <div class="content">
+            {workData.works.map((work, index) => 
+                <WorkSection id={formatToId(work['company-name'], index)} work={work} />
+            )}
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    #experience {
+        min-height: 100vh;
+        max-width: var(--container-size);
+        padding-inline: clamp(5rem, 10vw, 15rem);
+        margin: 10rem auto;
+        .container aside {
+            display: none;
+        }
+    }
+
+    @media (width > 48em) {
+        #experience {
+            .container {
+                display: grid;
+                gap: 5rem;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 4fr);
+                aside {
+                    display: block;
+                    ul {
+                        position: sticky;
+                        top: 75px;
+                        max-height: 80vh;
+                        overflow-x: hidden;
+                        overflow-y: auto;
+                        li {
+                            a {
+                                display: inline-block;
+                                padding: 12px 16px;
+                                cursor: pointer;
+                                transition: .2s;
+                                &.active {
+                                    color: var(--primary-color-3);
+                                }
+                                &:hover {
+                                    color: var(--primary-color-3);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>
+
+<script>
+    const sections: NodeListOf<HTMLElement> | null = document.querySelectorAll<HTMLElement>('section#experience .content section');
+	const navigationItems: NodeListOf<Element> = document.querySelectorAll<HTMLElement>('aside a');
+
+	window.onscroll = () => {
+		sections.forEach((section) => {
+			const top: number = window.scrollY;
+			const offset: number = section.getBoundingClientRect().top + window.scrollY - 100;
+			const height: number = section.offsetHeight;
+			const id: string | null = section.getAttribute('id');
+            
+			if (top >= offset && top < offset + height) {
+				navigationItems.forEach(navigationItem => {
+					navigationItem.classList.remove('active');
+					const item = document.querySelector('aside a[href*=' + id + ']');
+					if (item) item.classList.add('active');
+				})
+			}
+		});
+	}
+</script>

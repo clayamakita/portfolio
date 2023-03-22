@@ -1,18 +1,95 @@
-@use 'variables' as var;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --container-size: 100rem;
+    --dark-color-1: hsl(237, 11%, 61%);
+    --dark-color-2: hsl(236, 14%, 39%);
+    --dark-color-3: hsl(237, 21%, 20%);
+    --light-color-1: hsl(240, 6%, 90%);
+    --light-color-2: hsl(240, 6%, 68%);
+    --light-color-3: hsl(240, 5%, 50%);
+    --primary-color-1: var(--green-color-1);
+    --primary-color-2: var(--green-color-2);
+    --primary-color-3: var(--green-color-3);
+
+    --blue-color-1: 220, 100%, 70%;
+    --blue-color-2: hsl(221, 95%, 61%);
+    --blue-color-3: hsl(221, 65%, 52%);
+    --red-color-1: hsl(0, 100%, 75%);
+    --red-color-2: hsl(0, 100%, 68%);
+    --red-color-3: hsl(0, 100%, 62%);
+    --green-color-1: hsl(150, 79%, 63%);
+    --green-color-2: hsl(150, 68%, 54%);
+    --green-color-3: hsl(154, 94%, 39%);
+    --orange-color-1: hsl(39, 96%, 72%);
+    --orange-color-2: hsl(34, 98%, 63%);
+    --orange-color-3: hsl(32, 100%, 50%);
+    --yellow-color-1: hsl(53, 97%, 72%);
+    --yellow-color-2: hsl(49, 98%, 64%);
+    --yellow-color-3: hsl(48, 100%, 50%);
+    --teal-color-1: hsl(182, 74%, 81%);
+    --teal-color-2: hsl(184, 71%, 68%);
+    --teal-color-3: hsl(184, 100%, 44%);
+    --purple-color-1: hsl(289, 61%, 78%);
+    --purple-color-2: hsl(278, 62%, 61%);
+    --purple-color-3: hsl(270, 100%, 40%);
+
+    --font-mono: "Roboto Mono", monospace;
+    --font-xxs: 1.2rem;
+    --font-xs: 1.3rem;
+    --font-sm: 1.4rem;
+    --font-md: 1.6rem;
+    --font-lg: 1.8rem;
+    --font-xl: 2.0rem;
+    --font-xxl: 2.2rem;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
 html {
-    font-family: monospace;
-    background-color: var.$light-background-color;
-    color: var.$light-font-color;
-    &.dark {
-        background-color: var.$dark-background-color;
-        color: var.$dark-font-color;
-    }
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding-top);
+    font-size: 62.5%;
 }
 
 body {
-    margin: 0;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+    font-family: var(--font-mono);
+    font-weight: 300;
+    background-color: var(--dark-color-3);
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: var(--light-color-1);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+main > section > h1 {
+    color: var(--light-color-1);
+    font-size: 1.8rem;
+    margin-block-end: 4rem;
+    font-weight: 400;
+    &::before {
+        content: "0" counter(sections);
+        margin-inline-end: 0.75rem;
+        font-weight: 700;
+        color: var(--primary-color-3);
+    }
+}
+
+h2, h3, p, a, li {
+    color: var(--light-color-2);
+}
+
+p, a, li {
+    font-size: var(--font-xxs);
 }

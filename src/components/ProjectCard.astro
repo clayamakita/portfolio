@@ -1,0 +1,112 @@
+---
+import { Icon } from 'astro-icon';
+const { project, hidden } = Astro.props;
+---
+
+<li class:list={["card", { hidden }]}>
+    <div class="content">
+        <div class="icons">
+            <Icon class="folder-icon close" name="mdi:folder-outline" />
+            <Icon class="folder-icon open" name="mdi:folder-open-outline" />
+            <div class="links">
+                {(project["git-link"] && project["git-link"] != "") && <a href={project["git-link"]} target="_blank"><Icon name="mdi:github" /></a>}
+                {(project["project-link"] && project["project-link"] != "") && <a href={project["project-link"]} target="_blank"><Icon name="uil:external-link-alt" /></a>}
+            </div>
+        </div>
+        <h3><a href={(project["project-link"] && project["project-link"] != "") ? project["project-link"] : project["git-link"]} target="_blank">{project.name}</a></h3>
+        <p>{project.description}</p>
+    </div>
+    <ul class="technologies">
+        {project.technologies.map((technology: string) => (
+            <li>{technology}</li>
+        ))}
+    </ul>
+</li>
+
+<style lang="scss">
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--dark-color-2);
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+        cursor: pointer;
+        transition: .2s;
+        &.hidden {
+            display: none;
+        }
+        &:hover {
+            transform: translateY(-5px);
+            > .content > .icons > .close {
+                display: none;
+            }
+            > .content > .icons > .open {
+                display: block;
+            }
+        }
+        .content {
+            .icons {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1rem;
+                color: var(--primary-color-3);
+                .close {
+                    display: block;
+                }
+                .open {
+                    display: none;
+                }
+                .links {
+                    a {
+                        position: relative;
+                        z-index: 1;
+                    }
+                }
+            }
+            h3 a {
+                font-size: 1.6rem;
+                &:hover {
+                    color: var(--primary-color-3);
+                }
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: 0;
+                }
+            }
+        }
+        p {
+            margin: 1rem 0;
+        }
+        .technologies {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 1.6rem;
+            li:not(:last-child)::after {
+                content: " | ";
+            }
+        }
+    }
+    
+    [astro-icon="mdi:github"], [astro-icon="uil:external-link-alt"] {
+        width: 25px;
+        height: 25px;
+        &:hover {
+            color: var(--primary-color-3);
+        }
+    }
+
+    [astro-icon="mdi:folder-outline"], [astro-icon="mdi:folder-open-outline"] {
+        width: 50px;
+        height: 50px;
+    }
+</style>

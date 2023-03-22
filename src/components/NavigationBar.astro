@@ -1,57 +1,213 @@
 ---
-import DarkModeButton from "./DarkModeButton.astro";
+import HamburgerButton from "./HamburgerButton.astro";
 
+const navigationItems = ["About", "Experience", "Projects", "Contact"];
 ---
-<nav>
-    <ul>
-        <li><a href="/portfolio/">SamWK</a></li>
-        <li><a href="/portfolio/projects/">Projects</a></li>
-        <li><a href="/portfolio/about/">About</a></li>
-        <li><DarkModeButton /></li>
-    </ul>
-</nav>
+
+<header class="primary-header flex">
+    <a href="#" class="logo">SamWK</a>
+    <HamburgerButton />
+    <nav>
+        <ul id="primary-navigation" class="primary-navigation flex" data-visible="false">
+            {navigationItems.map((item, index) => (
+                <li class={index == 0 ? "active" : ""}>
+                    <a href={"#" + item.toLowerCase()}>{item}</a>
+                </li>
+            ))}
+            <div>
+                <a class="resume" href="resume.pdf" target="_blank">Resume</a>
+            </div>
+        </ul>
+    </nav>
+</header>
 
 <style lang="scss">
-    @use '../styles/variables' as var;
+    .flex {
+        display: flex;
+        gap: var(--gap, 1rem);
+    }
+    .primary-header {
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        transition: .2s;
+        z-index: 100;
+        background-color: var(--dark-color-3);
 
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+        .logo {
+            color: var(--primary-color-3);
+            margin: 1.6rem;
+            font-weight: 400;
+            z-index: 10;
+        }
+
+        ul.primary-navigation {
+            > li {
+                counter-increment: item 1;
+                > a {
+                    position: relative;
+                    &::before {
+                        content: "0" counter(item);
+                        margin-inline-end: 0.75em;
+                        font-weight: 700;
+                        color: var(--primary-color-3);
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -2px;
+                        height: 1px;
+                        left: 0;
+                        transition: width .3s ease 0s, left .3s ease 0s;
+                        width: 0;
+                        background: var(--primary-color-3);
+                    }
+                    &:hover::after {
+                        width: 100%;
+                    }
+                    &.active::after {
+                        width: 100%;
+                    }
+                }
+            }
+            > div a {
+                color: var(--primary-color-3);
+                border: 1px solid var(--primary-color-3);
+                padding: 6px 12px;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    .shadow {
+        box-shadow: 0 10px 20px -15px black;
+    }
+
+    body.scroll-lock {
         overflow: hidden;
-        background-color: var.$light-navigation-background-color;
-        z-index: 24;
     }
 
-    li {
-        float: left;
-        
-        a {
-            color: var.$light-font-color;
-            display: block;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-
-            &:hover {
-                background-color: var.$light-hover-background-color;
+    @media (width <= 35em) {
+        .primary-header {
+            nav:has(ul[data-visible="true"])::after {
+                content: "";
+                position: fixed;
+                inset: 0 0 0 0;
+                backdrop-filter: blur(5px);
+            }
+            ul.primary-navigation {
+                --gap: 5rem;
+                position: fixed;
+                inset: 0 0 0 30%;
+                flex-direction: column;
+                background-color: var(--dark-color-2);
+                box-shadow: -10px 0px 30px -15px black;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+                transform: translateX(110%);
+                transition: transform 350ms ease-out;
+                &[data-visible="true"] {
+                    transform: translateX(0%);
+                }
             }
         }
     }
 
-    :global(.dark) {
-        ul {
-            background-color: var.$dark-navigation-background-color;
-        }
-        li a {
-            color: var.$dark-font-color;
-            &:hover {
-                background-color: var.$dark-hover-background-color;
-            }
+    @media (width > 35em) {
+        .primary-navigation {
+            --gap: clamp(1.5rem, 3vw, 3rem);
+            padding-block: 1.5rem;
+            padding-inline-end: 2rem;
         }
     }
-
-    .active {
-        color: #a8c7fa;
-    }
+    // @supports (backdrop-filter: blur(1rem)) {
+    //     .primary-header {
+    //         .primary-navigation {
+    //             background: hsl(0 0% 00% / 0.5);
+    //             backdrop-filter: blur(1rem);
+    //         }
+    //     }
+    // }
 </style>
+
+<script>
+    const navigationHeader: HTMLElement | null = document.querySelector<HTMLElement>('.primary-header');
+    const primaryNavigation: HTMLElement | null = navigationHeader && navigationHeader.querySelector('.primary-navigation');
+    const hamburgerButton: HTMLElement | null = navigationHeader && navigationHeader.querySelector('.hamburger-button');
+    hamburgerButton && hamburgerButton.addEventListener('click', toggle);
+
+    function toggle() {
+        if (!hamburgerButton || !primaryNavigation) return;
+        const isOpen: boolean = hamburgerButton.getAttribute('aria-expanded') !== 'true';
+        hamburgerButton.setAttribute('aria-expanded', String(isOpen));
+        primaryNavigation.setAttribute('data-visible', String(isOpen));
+        document.body.classList.toggle('scroll-lock');
+
+        // if(isOpen) {
+        //     document.addEventListener('mouseup', onMouseUp);
+        // } else {
+        //     document.removeEventListener('mouseup', onMouseUp);
+        // }
+    }
+
+    function onMouseUp(event: MouseEvent) {
+        if (!primaryNavigation || !hamburgerButton) return;
+        if (primaryNavigation !== event.target && !primaryNavigation.contains(event.target as Node)) {
+            close();
+        }
+    }
+
+    const navigationHeight: number | null = navigationHeader && (navigationHeader.offsetHeight + 25);
+    document.documentElement.style.setProperty('--scroll-padding-top', String(navigationHeight) + 'px');
+
+    navigationHeader && window.addEventListener('scroll', () => {
+        if ((window.innerHeight + window.pageYOffset + 1) >= document.body.offsetHeight) {
+            navigationHeader.classList.remove('shadow');
+        } else if(window.scrollY > 0) {
+            navigationHeader.classList.add('shadow');
+        } else {
+            navigationHeader.classList.remove('shadow');
+        }
+    });
+
+    const sections: NodeListOf<HTMLElement> | null = document.querySelectorAll<HTMLElement>('main > *');
+	const navigationItems: NodeListOf<Element> | null = primaryNavigation && primaryNavigation.querySelectorAll<HTMLElement>('li > a');
+
+    window.addEventListener('scroll', activeNavigationItem);
+
+	function activeNavigationItem() {
+		sections && sections.forEach((section) => {
+            if (!navigationItems || !primaryNavigation) return;
+			const top: number = window.scrollY;
+			const offset: number = section.getBoundingClientRect().top + window.scrollY - 100;
+			const height: number = section.offsetHeight;
+			const id: string | null = section.getAttribute('id');
+
+			if (top >= offset && top < offset + height) {
+				navigationItems.forEach(navigationItem => {
+					navigationItem.classList.remove('active');
+					const item = primaryNavigation.querySelector('a[href*=' + id + ']');
+					if (item) item.classList.add('active');
+				});
+			}
+		});
+    }
+
+    const logo: HTMLElement | null = navigationHeader && navigationHeader.querySelector('a.logo');
+
+    logo && logo.addEventListener('click', close);
+
+    navigationItems && navigationItems.forEach((navigationItem) => {
+        navigationItem.addEventListener('click', close);
+    });
+
+    function close() {
+        if (!hamburgerButton || !primaryNavigation) return;
+        hamburgerButton.setAttribute('aria-expanded', "false");
+        primaryNavigation.setAttribute('data-visible', "false");
+        document.body.classList.remove('scroll-lock');
+        // document.removeEventListener('mouseup', onMouseUp);
+    }
+</script>

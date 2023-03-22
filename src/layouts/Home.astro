@@ -1,0 +1,85 @@
+---
+import homeData from '../data/home.json';
+
+---
+<div id="home">
+    <h1 data-attr="expection">
+        <span class="hello">Hello world! My name is </span>
+        <br /><span class="name">{homeData.name} </span>
+        <br />I'm a&nbsp;<span id="whoami"></span>
+    </h1>
+    <p>{homeData.description}</p>
+</div>
+
+<style lang="scss">
+    div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 100vh;
+        max-width: var(--container-size);
+        padding-inline: 5rem;
+        margin: auto;
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            line-height: 3.6rem;
+            .hello {
+                font-size: 1.6rem;
+            }
+            .name {
+                font-size: 3.2rem;
+                font-weight: 400;
+                color: var(--primary-color-3);
+            }
+            #whoami {
+                border-right: 2px solid;
+                font-weight: 400;
+                animation: cursor .4s step-end infinite alternate;
+                color: var(--primary-color-3);
+            }
+        }
+        p {
+            max-width: 60rem;
+        }
+    }
+
+    @keyframes cursor {
+        50% {
+            border-color: transparent;
+        }
+    }
+</style>
+
+<script>
+    import data from '../data/home.json';
+    const whoami = document.getElementById('whoami');
+    let position = 0;
+    let positionChar = 0;
+    let isBackspacing = false; 
+    let counter = 0;
+
+    window.setInterval(() => {
+        const title = data.titles[position];
+        if (counter < 10) {
+            counter++;
+        } else if (positionChar < title.length && !isBackspacing && whoami) {
+            whoami.textContent += title.charAt(positionChar);
+            positionChar++;
+        } else if (counter < 20) {
+            counter++;
+        } else if (positionChar != 0 && whoami) {
+            isBackspacing = true;
+            if (whoami.textContent)
+                whoami.textContent = whoami.textContent.slice(0, -1);
+            positionChar--;
+        } else {
+            counter = 0;
+            isBackspacing = false;
+            position++;
+            if (position >= data.titles.length)
+                position = 0;
+        }
+    }, 120);
+</script>

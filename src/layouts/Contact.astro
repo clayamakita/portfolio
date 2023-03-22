@@ -1,0 +1,36 @@
+---
+import contactData from '../data/contact.json';
+---
+
+<section id="contact">
+    <h1 class="counter">What's Next?</h1>
+    <h2>Get In Touch</h2>
+    <p>{contactData.description}</p>
+    <a href={"mailto:" + contactData.email} target="_blank">Say Hello</a>
+</section>
+
+<style lang="scss">
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100vh - 48px - 100px + 1px);
+        max-width: 35rem;
+        margin-inline: auto;
+        h2 {
+            font-size: 3em;
+            margin-bottom: 1rem;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        a {
+            padding: 12px 16px;
+            border: 1px solid var(--primary-color-3);
+            border-radius: 4px;
+            color: var(--primary-color-3);
+        }
+    }
+</style>
