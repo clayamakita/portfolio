@@ -29,15 +29,17 @@ const navigationItems = ["About", "Experience", "Projects", "Contact"];
     .primary-header {
         align-items: center;
         justify-content: space-between;
-        position: sticky;
-        top: 0;
+        position: fixed;
+        height: clamp(4.8rem, 8vw, 7.2rem);
+        inset-inline: 0;
         transition: .2s;
         z-index: 100;
         background-color: var(--dark-color-3);
+        padding: clamp(1rem, 1vw, 1.6rem);
 
         .logo {
             color: var(--primary-color-3);
-            margin: 1.6rem;
+            padding: 1.2rem 1.8rem;
             font-weight: 400;
             z-index: 10;
         }
@@ -163,7 +165,7 @@ const navigationItems = ["About", "Experience", "Projects", "Contact"];
     document.documentElement.style.setProperty('--scroll-padding-top', String(navigationHeight) + 'px');
 
     navigationHeader && window.addEventListener('scroll', () => {
-        if ((window.innerHeight + window.pageYOffset + 1) >= document.body.offsetHeight) {
+        if ((window.innerHeight + window.pageYOffset + 10) >= document.body.offsetHeight) {
             navigationHeader.classList.remove('shadow');
         } else if(window.scrollY > 0) {
             navigationHeader.classList.add('shadow');
