@@ -1,0 +1,63 @@
+---
+import profileImage from '../assets/img/me.png';
+import aboutData from '../data/about.json';
+
+---
+
+<section id="about">
+    <h1 class="counter">About Me</h1>
+    <div class="content">
+        <figure class="profile-image">
+            <img src={profileImage} alt="Profile Image">
+        </figure>
+        {aboutData.description.map((paragraph) => (
+            <p>{paragraph}</p>
+        ))}
+        <ul>
+            {aboutData.skills.map((skill) => (
+                <li>{skill}</li>
+            ))}
+        </ul>
+    </div>
+</section>
+
+<style lang="scss">
+    section {
+        max-width: var(--container-size);
+        min-height: 100vh;
+        padding-inline: clamp(5rem, 10vw, 15rem);
+        margin: 10rem auto;
+        .content {
+            p {
+                margin-block: 1.6em;
+            }
+            ul {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                li {
+                    &::before {
+                        content: "▹ ";
+                        color: var(--primary-color-3);
+                    }
+                }
+            }
+            .profile-image {
+                width: clamp(15rem, 30vw, 25rem);
+                margin: 0 auto;
+                img {
+                    object-fit: cover;
+                    max-width: 100%;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    @media (width > 35em) {
+        .profile-image {
+            float: right;
+            padding: 1.6rem;
+        }
+    }
+</style>

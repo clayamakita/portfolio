@@ -1,0 +1,107 @@
+{
+    "works": [
+        {
+            "company-name": "Box2Box Studios",
+            "company-link": "",
+            "job-title": "Game Developer",
+            "date": "May - June 2018",
+            "description": "Develop a turn-based puzzle (Plano Infalível) game for a design competition",
+            "achievements": [
+                "Placed 2nd as the smallest game studio entered; performed as the only programmer on a team of 4",
+                "Expertly consulted the original design to enhance feasibility and adoption of suitable character images",
+                "Developed a flawless product by managing efficiencies to allow all bugs to be identified and fixed within competition timelines",
+                "Contributed to building confidence and trust among the team to support smooth and united decision making",
+                "Remained on target through effective project planning and a skilled daily assessment for needed adjustments"
+            ],
+            "skills": [
+                "Unity", "C#", "Git", "Photoshop"
+            ]
+        }, {
+            "company-name": "Fluid27",
+            "company-link": "",
+            "job-title": "Full Stack Developer",
+            "date": "August 2015 - August 2017",
+            "description": "A social networking service called Mãeguru to help mothers, pregnant and future mothers to share experiences and advice",
+            "achievements": [
+                "Resolved performance issues and enhanced overall users experience by identifying and executing a solution to replace the entire application with a change in code",
+                "Maintained the integrity of the features of the old application as per the client's request",
+                "Solved mixing and inconsistent data issues with an idea to replace the entire server",
+                "Migrated and deployed all data from the older to the newer server within 2 hours applying expertise in how databases operationalize data",
+                "Led and coached a team of 5 in collaborative development using Agile frameworks like Scrum and Kanban for continuous delivery of new features",
+                "Provided technical direction to development teams to support successful delivery",
+                "Replicated the same base application for other fields of interest like veterinary (Vetguru) and dentistry (Uniodonto) because of the success of the Mãeguru project"
+            ],
+            "skills": [
+                "C#", ".NET", "Java", "Swift", "Node.js", "Azure", "AWS", "Firebase", "Git"
+            ]
+        }, {
+            "company-name": "FOHB",
+            "company-link": "https://fohb.com.br/",
+            "job-title": "Technical Support",
+            "date": "November 2014 - February 2016",
+            "description": "Customized, Integrated, and Maintenance a FOHB system intended to help hotel chains evaluate their competitiveness and follow sector trends",
+            "achievements": [
+                "Redesigned, developed, and deployed a new website that was optimized, functional, easy to use, and responsive",
+                "Succeeded in meeting all requirements and expectations despite an extremely tight budget by managing efficiencies effectively, reducing billable hours"
+            ],
+            "skills": [
+                "C#", ".NET", "SQL Server", "Javascript", "jQuery", "Bootstrap", "HTML", "CSS", "PHP", "WordPres", "Photoshop"
+            ]
+        }, {
+            "company-name": "Innovation Center",
+            "company-link": "https://www.sp.senac.br/",
+            "job-title": "Software and Game Developer",
+            "date": "April - August 2014",
+            "description": "Customized, Integrated, and Maintenance a FOHB system intended to help hotel chains evaluate their competitiveness and follow sector trends",
+            "achievements": [
+                "Headhunted to save the project which was delivered on time resulting in being hired on by FOHB to support the system",
+                "Assigned work to project members based on strengths and ability to maximize productivity; Filled in knowledge and skills gaps",
+                "Mentored teams to assist in building capacity for future projects"
+            ], 
+            "skills": [
+                "C#", ".NET", "SQL Server", "Javascript", "jQuery", "HTML", "CSS", "Unity", "Azure"
+            ]
+        }, {
+            "company-name": "Thomson Reuters",
+            "company-link": "https://www.thomsonreuters.com/en.html",
+            "job-title": "Software Developer",
+            "date": "February 2013 - May 2014",
+            "description": "Customized, developed, and implemented a legal system called Webfull and its successor Next that helps companies to maintain, manage, and track their legal process.",
+            "achievements": [
+                
+            ],
+            "skills": [
+                "C#", ".NET", "SQL Server", "Oracle", "Javascript", "jQuery", "HTML", "CSS"
+            ]
+        }, {
+            "company-name": "Cidade Viva",
+            "company-link": "",
+            "job-title": "Front End Developer",
+            "date": "July - November 2012",
+            "description": "Cidade Viva rewards recycling with a promo code offering discounts for all partner stores",
+            "achievements": [
+                "Recruited and managed a high-performance team of 3 to develop the system and delivery on time"
+            ],
+            "skills": [
+                "PHP", "Smarty", "Javascript", "jQuery", "HTML", "CSS"
+            ]
+        }, {
+            "company-name": "Microsoft Innovation Center",
+            "company-link": "https://www.microsoft.com/en-ca/",
+            "job-title": "Game Developer Intern",
+            "date": "April 2011 - December 2012",
+            "description": "A competitive Hotel Management game called HOST helps students to understand and interpret balance sheets and income statements for the fiscal year",
+            "achievements": [
+                "The Microsoft Innovation Center only accepts the best students who have at least one year of any technology course to do an internship, they made an exception so I could enter with half a year",
+                "Analyzed a hotel game made in Excel to find out how to make any kind of simulation game",
+                "Changed the main focus of Microsoft Innovation Center from system development to educational game development. [developed a customer base given expertise that attracted an educational game development focus which was new to the innovation center",
+                "Successfully developed hotel management game simulation focused on financial reports, which opened doors for people and new projects",
+                "Supported the selection process to form high-performance teams",
+                "Led a team of 3 for all projects related to game design and level design"
+            ],
+            "skills": [
+                "Game Design", "Level Design", "SQL Server", "Untiy", "C#", ".NET", "XNA", "Windows Phone", "Kinect"
+            ]
+        }
+    ]
+}

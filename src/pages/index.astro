@@ -1,7 +1,23 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import UnderConstruction from "../layouts/UnderConstruction.astro";
+import Home from "../layouts/Home.astro";
+import About from "../layouts/About.astro";
+import Work from "../layouts/Work.astro";
+import Projects from "../layouts/Projects.astro";
+import Contact from "../layouts/Contact.astro";
 ---
 <BaseLayout>
-	<UnderConstruction></UnderConstruction>
+	<main class="content">
+		<Home />
+		<About />
+		<Work />
+		<Projects />
+		<Contact />
+	</main>
 </BaseLayout>
+
+<style lang="scss" is:global>
+	main > section {
+        counter-increment: sections 1;
+    }
+</style>

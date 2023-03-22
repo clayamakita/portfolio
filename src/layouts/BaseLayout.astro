@@ -2,13 +2,35 @@
 import "../styles/global.scss"
 import Head from "../components/Head.astro";
 import NavigationBar from "../components/NavigationBar.astro";
-import Footer from "../components/Footer.astro";
+import Footer from "./Footer.astro";
 ---
 <html lang="en">
-	<Head title="SamWK Portfolio" />
+	<Head />
 	<body>
-        <NavigationBar />
+		<NavigationBar />
 		<slot />
 		<Footer />
 	</body>
 </html>
+
+<script>
+	const sections: NodeListOf<HTMLElement> = document.querySelectorAll('main > section');
+	const navigationItems: NodeListOf<HTMLElement> = document.querySelectorAll('header nav ul li a');
+
+	window.onscroll = () => {
+		sections.forEach((section) => {
+			const top: number = window.scrollY;
+			const offset: number = section.offsetTop - 100;
+			const height: number = section.offsetHeight;
+			const id: string | null = section.getAttribute('id');
+
+			if (top >= offset && top < offset + height) {
+				navigationItems.forEach(navigationItem => {
+					navigationItem.classList.remove('active');
+					const item: HTMLElement | null = document.querySelector('header nav ul li a[href*=' + id + ']');
+					item && item.classList.add('active');
+				})
+			}
+		});
+	}
+</script>
