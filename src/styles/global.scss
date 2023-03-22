@@ -40,8 +40,8 @@
     --font-sm: 1.4rem;
     --font-md: 1.6rem;
     --font-lg: 1.8rem;
-    --font-xl: 2.0rem;
-    --font-xxl: 2.2rem;
+    --font-xl: 2.1rem;
+    --font-xxl: 2.4rem;
 }
 
 * {
@@ -75,7 +75,7 @@ a {
 
 main > section > h1 {
     color: var(--light-color-1);
-    font-size: 1.8rem;
+    font-size: clamp(var(--font-xl), 2vw, var(--font-xxl));
     margin-block-end: 4rem;
     font-weight: 400;
     &::before {
@@ -91,5 +91,5 @@ h2, h3, p, a, li {
 }
 
 p, a, li {
-    font-size: var(--font-xxs);
+    font-size: clamp(var(--font-xxs), 2vw, var(--font-lg));
 }
