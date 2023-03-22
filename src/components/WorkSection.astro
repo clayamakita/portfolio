@@ -3,7 +3,7 @@ const { work, id } = Astro.props;
 ---
 <section id={id} class="job-description">
     <div class="title">
-        <h2>{work['job-title']} <span class="at">@ {work['company-link'] && work['company-link'] != "" ? <a href={work['company-link']}>{work['company-name']}</a> : work['company-name']}</span></h2>
+        <h2>{work['job-title']} <span class="at">@ {work['company-link'] && work['company-link'] != "" ? <a href={work['company-link']} target="_blank">{work['company-name']}</a> : work['company-name']}</span></h2>
         <h3 class="date">{work['date']}</h3>
     </div>
     <p class="description">{work['description']}</p>
