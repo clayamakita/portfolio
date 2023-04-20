@@ -1,44 +1,68 @@
 {
     "projects": [
         {
-            "name": "Advent of Code",
-            "description": "It's an annual online programming challenge that takes place in December, featuring daily puzzles designed to challenge participants' problem-solving skills.",
+            "name": "Power BI report - Analysis of supermarkets' products prices",
+            "description": "Power BI report created from data collected weekly using web scraping in Python.",
             "project-link": "",
-            "git-link": "https://github.com/wksam/adventofcode",
+            "git-link": "https://app.powerbi.com/view?r=eyJrIjoiZDJiZjA3YTAtMDE0MC00ZWE0LWJlOWItOTc5OGQ4ZTg1MmFkIiwidCI6ImZjNzk4OWZkLTI5NDUtNGViZS1hMWQxLTM2N2NkYWNhNjE2NSJ9",
             "technologies": [
-                "Python", "Javascript"
+                "Power BI", "DAX", "Power Query", "M", "Data Modeling"
             ]
         }, {
-            "name": "LeetCode",
-            "description": "It's an online platform with a database of coding challenges to help people improve their coding skills and prepare for technical interviews.",
+            "name": "Web scraping data using Python",
+            "description": "Using web scraping techniques, the goal of this project is to collect data from two different supermarkets' websites, analyze changes over time and find the best deals.",
             "project-link": "",
-            "git-link": "https://github.com/wksam/leetcode",
+            "git-link": "https://github.com/clayamakita/webscraping_project_01",
             "technologies": [
-                "Javascript"
+                "Python", "Beautiful Soup", "Pandas", "Seaborn", "Matplotlib", "Git"
             ]
         }, {
-            "name": "App Ideas",
-            "description": "It's a website that provides practical project ideas for developers to improve their programming skills.",
-            "project-link": "https://wksam.github.io/app-ideas/",
-            "git-link": "https://github.com/wksam/app-ideas",
-            "technologies": [
-                "HTML", "CSS", "Javascript"
-            ]
-        }, {
-            "name": "Spoj",
-            "description": "It's an online platform with a large collection of programming problems in various domains, supporting over 50 programming languages, and providing statistics and rankings to track users' progress. It is widely used by competitive programmers to prepare for coding contests and interviews.",
+            "name": "Article: Using data to nudge people",
+            "description": " Article entitled “What is the one thing that you keep putting off again and again until tomorrow?” shares how to use simple data to nudge people into avoiding procrastination.",
             "project-link": "",
-            "git-link": "https://github.com/wksam/spoj",
+            "git-link": "https://tinyurl.com/ArticleClarissa",
             "technologies": [
-                "Python", "C#", "C++", "Go", "Java", "Javascript", "Others"
+                "Data Visualization", "Communication", "Nudge", "Behavioral Science"
             ]
         }, {
-            "name": "Frontend Mentor",
-            "description": "It's an online platform that provides web design challenges for developers to improve their front-end development skills, with design files and assets provided. Users can submit their solutions for feedback and connect with the community to build their portfolio and gain practical experience.",
-            "project-link": "https://wksam.github.io/frontend-mentor/",
-            "git-link": "https://github.com/wksam/frontend-mentor",
+            "name": "Data exploration using SQL",
+            "description": "This projects shows how to explore a database related to COVID-19 (cases, deaths and vaccination) using SQL.",
+            "project-link": "",
+            "git-link": "https://github.com/clayamakita/project_1_sql_data_exploration",
             "technologies": [
-                "HTML", "CSS"
+                "SQL", "Data exploration"
+            ]
+        }, {
+            "name": "Customer Segmentation Project using K-Means Clustering",
+            "description": "Jupyter Notebook demonstrating how to segment customers into groups in order to optimize a company's marketing strategy",
+            "project-link": "",
+            "git-link": "https://github.com/clayamakita/customer_segmentation_project_kmeans",
+            "technologies": [
+                "Python", "Scikit", "Seaborn", "Matplotlib", "Data Visualization"
+            ]
+        }, {
+            "name": "Tableau - Airbnb 2016 Listings in Seattle",
+            "description": "Dashboard that displays data regarding Airbnb 2016 Listings in Seattle.",
+            "project-link": "",
+            "git-link": "https://public.tableau.com/app/profile/clarissa.yamakita/viz/Airbnb2016ListingsinSeattle/Dashboard",
+            "technologies": [
+                "Tableau", "Data Visualization"
+            ]
+        }, {
+            "name": "Tableau - Customer Analysis from Marketing Campaigns",
+            "description": "Using a dataset from Kaggle, this project presents data about customers purchases through different channels and use of discounts from marketing campaigns.",
+            "project-link": "",
+            "git-link": "https://public.tableau.com/views/CustomerAnalysisfromMarketingCampaigns/ClientsProfile?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+            "technologies": [
+                "Tableau", "Data Visualization"
+            ]
+        }, {
+            "name": "Working with Missing Data in Python",
+            "description": "Techniques to handle missing data without dropping rows or columns",
+            "project-link": "",
+            "git-link": "https://github.com/clayamakita/missing_data_vehicles_collisions",
+            "technologies": [
+                "Python"
             ]
         }
     ]
