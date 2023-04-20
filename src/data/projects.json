@@ -2,7 +2,7 @@
     "projects": [
         {
             "name": "Power BI report - Analysis of supermarkets' products prices",
-            "description": "Power BI report created from data collected weekly using web scraping in Python.",
+            "description": "Power BI report created from data collected using web scraping in Python.",
             "project-link": "",
             "git-link": "https://app.powerbi.com/view?r=eyJrIjoiZDJiZjA3YTAtMDE0MC00ZWE0LWJlOWItOTc5OGQ4ZTg1MmFkIiwidCI6ImZjNzk4OWZkLTI5NDUtNGViZS1hMWQxLTM2N2NkYWNhNjE2NSJ9",
             "technologies": [
@@ -41,18 +41,18 @@
                 "Python", "Scikit", "Seaborn", "Matplotlib", "Data Visualization"
             ]
         }, {
-            "name": "Tableau - Airbnb 2016 Listings in Seattle",
-            "description": "Dashboard that displays data regarding Airbnb 2016 Listings in Seattle.",
-            "project-link": "",
-            "git-link": "https://public.tableau.com/app/profile/clarissa.yamakita/viz/Airbnb2016ListingsinSeattle/Dashboard",
-            "technologies": [
-                "Tableau", "Data Visualization"
-            ]
-        }, {
             "name": "Tableau - Customer Analysis from Marketing Campaigns",
             "description": "Using a dataset from Kaggle, this project presents data about customers purchases through different channels and use of discounts from marketing campaigns.",
             "project-link": "",
             "git-link": "https://public.tableau.com/views/CustomerAnalysisfromMarketingCampaigns/ClientsProfile?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+            "technologies": [
+                "Tableau", "Data Visualization"
+            ]
+        }, {
+            "name": "Tableau - Airbnb 2016 Listings in Seattle",
+            "description": "Dashboard that displays data regarding Airbnb 2016 Listings in Seattle.",
+            "project-link": "",
+            "git-link": "https://public.tableau.com/app/profile/clarissa.yamakita/viz/Airbnb2016ListingsinSeattle/Dashboard",
             "technologies": [
                 "Tableau", "Data Visualization"
             ]
