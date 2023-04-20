@@ -1,11 +1,11 @@
 {
     "works": [
         {
-            "company-name": "Rogers Telecommuncations",
+            "company-name": "Rogers",
             "company-link": "https://www.rogers.com/",
             "job-title": "Reporting Analyst",
             "date": "September 2022 - Present",
-            "description": "Working for the Order Desk (Access Networks PMO).",
+            "description": "Working for the Order Desk (Access Networks PMO):",
             "achievements": [
                 "Responsible for the accurate and timely completion of reports. Primary focus for reporting is on materials needs, consumption, flow and utilization.",
                 "Responsible for being a subject matter expert (SME) for designated reports and processes.",
@@ -22,7 +22,7 @@
             "company-link": "https://www.petz.com.br/",
             "job-title": "Junior Data Analyst",
             "date": "September 2021 - June 2022",
-            "description": "Worked at the Growth department (E-commerce and Customer Loyalty)",
+            "description": "Worked at the Growth department (E-commerce and Customer Loyalty):",
             "achievements": [
                 "Built a self-serve dashboard on Amazon Quicksight to efficiently communicate results of one of the company’s most important commercial tools (personalized offers for clients), delivering high-quality insights to both technical and non-technical stakeholders.",
                 "Improved process for updating monthly reports of department’s results using Excel and Powerpoint, reducing effort (from 7 hours to about 3 hours every month) and decreasing risk of manual errors by automating the update of data and charts using functions like Vlookup, Match, Index, Large, Named Ranges, etc.",
@@ -37,7 +37,7 @@
             "company-link": "https://www.reserveatlantica.com.br/",
             "job-title": "Planning Analyst (Business Intelligence Analyst)",
             "date": "December 2017 - March 2019",
-            "description": "Worked at the Sales & Marketing department",
+            "description": "Worked at the Sales & Marketing department:",
             "achievements": [
                 "Conducted the implementation of the company's on-premises Data Warehouse to advance data analytics. Evaluated business requirements from different internal stakeholders in the company, with a main focus on the ​​Sales & Marketing department. The project was coordinated with the IT department and an external consulting firm. It reduced the time to generate insights as well as freed BI analysts from spending days preparing reports.",
                 "Answered ad hoc requests using Power BI and developing dashboards which allowed senior management to make timely and better decisions.",
@@ -53,11 +53,10 @@
             "company-link": "https://www.reserveatlantica.com.br/",
             "job-title": "Sales Intelligence Analyst",
             "date": "December 2015 - November 2017",
-            "description": "Worked at the Sales & Marketing department",
+            "description": "Worked at the Sales & Marketing department:",
             "achievements": [
-                "Provided insight to sales teams and managers by performing analysis of KPIs (business metrics) using Excel and preparing presentations in PowerPoint to support data-driven decisions.",
+                "Provided insight to sales teams and managers by performing analysis of KPIs using Excel and preparing presentations in PowerPoint to support data-driven decisions.",
                 "Forecasted sales revenue by considering internal and external factors (economic conditions and outlook, holidays, new competitors, new hotels, investments) to help senior executives make assertive decisions.",
-                "Assisted the budgeting process to help drive the strategies of the Sales and Marketing department for the following year.", 
                 "Assisted the budgeting process to help drive the strategies of the Sales and Marketing department for the following year."
             ], 
             "skills": [

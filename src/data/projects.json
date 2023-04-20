@@ -10,7 +10,7 @@
             ]
         }, {
             "name": "Web scraping data using Python",
-            "description": "Using web scraping techniques, the goal of this project is to collect data from two different supermarkets' websites, analyze changes over time and find the best deals.",
+            "description": "Project to collect data from two different supermarkets' websites, analyze changes over time and find the best deals.",
             "project-link": "",
             "git-link": "https://github.com/clayamakita/webscraping_project_01",
             "technologies": [
@@ -34,7 +34,7 @@
             ]
         }, {
             "name": "Customer Segmentation Project using K-Means Clustering",
-            "description": "Jupyter Notebook demonstrating how to segment customers into groups in order to optimize a company's marketing strategy",
+            "description": "Jupyter Notebook demonstrating how to segment customers into groups in order to optimize a company's marketing strategy.",
             "project-link": "",
             "git-link": "https://github.com/clayamakita/customer_segmentation_project_kmeans",
             "technologies": [
@@ -58,7 +58,7 @@
             ]
         }, {
             "name": "Working with Missing Data in Python",
-            "description": "Techniques to handle missing data without dropping rows or columns",
+            "description": "Techniques to handle missing data without dropping rows or columns.",
             "project-link": "",
             "git-link": "https://github.com/clayamakita/missing_data_vehicles_collisions",
             "technologies": [
