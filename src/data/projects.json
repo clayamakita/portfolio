@@ -1,6 +1,14 @@
 {
     "projects": [
         {
+            "name": "Power BI report - Fitness Tracker App",
+            "description": "Power BI report which leverages design best practices to make complex information accessible.",
+            "project-link": "",
+            "git-link": "https://app.powerbi.com/view?r=eyJrIjoiNzAwZGFkZGEtNWFmZi00YjcyLThmZmYtZmI0Yzc1MmQ4OGQ5IiwidCI6ImZjNzk4OWZkLTI5NDUtNGViZS1hMWQxLTM2N2NkYWNhNjE2NSJ9",
+            "technologies": [
+                "Power BI", "Design", "DAX"
+            ]
+        }, {
             "name": "Power BI report - Analysis of supermarkets' products prices",
             "description": "Power BI report created from data collected using web scraping in Python.",
             "project-link": "",
