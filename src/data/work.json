@@ -8,14 +8,13 @@
             "description": "Working for the Order Desk (Access Networks PMO):",
             "achievements": [
                 "Responsible for the accurate and timely completion of reports. Primary focus for reporting is on materials needs, consumption, flow and utilization.",
-                "Responsible for being a subject matter expert (SME) for designated reports and processes.",
-                "Investigate reporting-based questions from various groups and provide clear and concise answers.",
-                "Transform data into insightful reporting information (ability to tell the story) with limited guidance.", 
-                "Create dashboard visualizations for reporting and ad hoc requests using Power BI and data modeling techniques, including the star schema  and the creation of dimension and fact tables.", 
-                "Document requirements and summarize information related to internal operational and business processes."
+                "Create dashboard visualizations for reporting and ad hoc requests using Power BI and data modeling techniques, including the star schema  and the creation of dimension and fact tables.",
+                "Automate data pipelines processes using Power Automate and dataflows in Power BI.", 
+                "Document requirements and summarize information related to internal operational and business processes.", 
+                "Guide other team members in data analysis and data modeling best practices to ensure standardized procedures and data integrity."
             ],
             "skills": [
-                "Power BI", "DAX", "Power Query", "M", "Data Modeling", "Data Visualization", "Excel"
+                "Power BI", "DAX", "Power Query", "M", "Data Modeling", "Data Visualization", "Excel", "Data Pipelines"
             ]
         }, {
             "company-name": "Petz",
@@ -26,11 +25,11 @@
             "achievements": [
                 "Built a self-serve dashboard on Amazon Quicksight to efficiently communicate results of one of the company’s most important commercial tools (personalized offers for clients), delivering high-quality insights to both technical and non-technical stakeholders.",
                 "Improved process for updating monthly reports of department’s results using Excel and Powerpoint, reducing effort (from 7 hours to about 3 hours every month) and decreasing risk of manual errors by automating the update of data and charts using functions like Vlookup, Match, Index, Large, Named Ranges, etc.",
-                "Automated tasks using Python and SQL on Databricks to update tables which resulted in reliable and consistent data for later analysis.",
+                "Automated tasks using Python and SQL on Databricks to create and update tables which resulted in reliable and consistent data for later analysis.",
                 "Built modular data structures and models in data marts using dbt for easy consumption ensuring best practices for data modeling and reporting workflows."
             ],
             "skills": [
-                "SQL", "Python", "Data Visualization", "Snowflake", "dbt", "Databricks", "Amazon Quicksight"
+                "SQL", "Python", "Data Visualization", "Snowflake", "dbt", "Databricks", "Amazon Quicksight", "Data Pipelines"
             ]
         }, {
             "company-name": "Hotel Direto",
