@@ -7,11 +7,16 @@
             "date": "September 2022 - Present",
             "description": "Working for the Order Desk (Access Networks PMO):",
             "achievements": [
-                "Responsible for the accurate and timely completion of reports. Primary focus for reporting is on materials needs, consumption, flow and utilization.",
-                "Create dashboard visualizations for reporting and ad hoc requests using Power BI and data modeling techniques, including the star schema  and the creation of dimension and fact tables.",
-                "Automate data pipelines processes using Power Automate and dataflows in Power BI.", 
-                "Document requirements and summarize information related to internal operational and business processes.", 
-                "Guide other team members in data analysis and data modeling best practices to ensure standardized procedures and data integrity."
+                "Responsible for the accurate and timely completion of reports. Primary focus for reporting is on materials needs, consumption, flow and utilization in projects.",
+                "Responsible for being a Subject Matter Expert (SME) for one of the most viewed Power BI reports of the workspace (average of 180 users over a period of 30 days), providing visibility and ease-to-analyze data regarding materials requests. ",
+                "Create Power BI reports using DAX, parameters, and data modeling techniques, including the star schema and the creation of dimension and fact tables.", 
+                "Provide data analysis on ad-hoc requests using Excel and Power BI.", 
+                "Ensure validity and accuracy of reports and data sources by tracking data sources freshness and key metrics.", 
+                "Extract and load data from multiple data sources (flat files and SQL Server) applying transformations using Power Query (M).",
+                "Automate and optimize datasets refresh using Power Automate and dataflows in Power BI.", 
+                "Document requirements, business logic and data sources, used in the reports, to facilitate transfer of knowledge and changes to the process.", 
+                "Guide other team members in data analysis and data modeling best practices to ensure standardized procedures and data integrity.", 
+                "Collaborate with the Supply Chain team to understand and provide insight into materials needs, change of processes, and prioritization of projects."
             ],
             "skills": [
                 "Power BI", "DAX", "Power Query", "M", "Data Modeling", "Data Visualization", "Excel", "Data Pipelines"
