@@ -3,20 +3,35 @@
         {
             "company-name": "Rogers",
             "company-link": "https://www.rogers.com/",
-            "job-title": "Reporting Analyst",
-            "date": "September 2022 - Present",
+            "job-title": "Senior Data Analyst",
+            "date": "August 2024 - May 2026",
             "description": "Working for the Order Desk (Access Networks PMO):",
             "achievements": [
-                "Responsible for the accurate and timely completion of reports. Primary focus for reporting is on materials needs, consumption, flow and utilization in projects.",
-                "Responsible for being a Subject Matter Expert (SME) for one of the most viewed Power BI reports of the workspace (average of 180 users over a period of 30 days), providing visibility and ease-to-analyze data regarding materials requests. ",
-                "Create Power BI reports using DAX, parameters, and data modeling techniques, including the star schema and the creation of dimension and fact tables.", 
-                "Provide data analysis on ad-hoc requests using Excel and Power BI.", 
-                "Ensure validity and accuracy of reports and data sources by tracking data sources freshness and key metrics.", 
-                "Extract and load data from multiple data sources (flat files and SQL Server) applying transformations using Power Query (M).",
-                "Automate and optimize datasets refresh using Power Automate and dataflows in Power BI.", 
-                "Document requirements, business logic and data sources, used in the reports, to facilitate transfer of knowledge and changes to the process.", 
-                "Guide other team members in data analysis and data modeling best practices to ensure standardized procedures and data integrity.", 
-                "Collaborate with the Supply Chain team to understand and provide insight into materials needs, change of processes, and prioritization of projects."
+                "Designed, developed, and maintained Power BI dataflows and dashboards, including a key dashboard tracking project status and materials needs to highlight priorities and risks.",
+                "Built and optimized data pipelines using Power BI dataflows and Power Automate to trigger automatic sequential refresh, improving data reliability across the workspace.",
+                "Refactored data models and refresh schedules to reduce capacity compute consumption and pipeline failures.", 
+                "Developed a data quality monitoring process to track data sources freshness and maintain data integrity, triggering automatic alerts and blocking downstream refreshes when upstream dependencies failed.", 
+                "Documented data sources and pipelines to support collaboration and assess impacts of upstream/downstream changes.", 
+                "Translated business requirements into actionable dashboards and reports through close collaboration with cross-functional stakeholders.", 
+                "Automated repetitive data processes using Power Automate, increasing efficiency and reducing manual effort.", 
+                "Supported ERP migration to the cloud by validating new data sources and planning report transitions, minimising business disruption.", 
+                "Mentored and coached team members on data analysis, data modelling, and Power BI best practices to ensure consistency and data integrity across the workspace.", 
+                "Partnered with Supply Chain stakeholders to provide insights on material requirements, process changes, and project prioritization."
+            ],
+            "skills": [
+                "Power BI", "DAX", "Power Query", "M", "Data Modeling", "Data Visualization", "Excel", "Data Pipelines"
+            ]
+        }, {
+            "company-name": "Rogers",
+            "company-link": "https://www.rogers.com/",
+            "job-title": "Data Analyst",
+            "date": "September 2022 - August 2024",
+            "description": "Working for the Order Desk (Access Networks PMO):",
+            "achievements": [
+                "Delivered accurate and timely reporting on materials needs, consumption, flow, and utilisation across projects, supporting data-driven decision making for Project Management and Supply Chain teams.",
+                "Served as Subject Matter Expert for one of the most-viewed Power BI reports in the workspace, averaging 200+ active users per 30-day period, providing self-serve visibility into materials requests and fulfillment.",
+                "Developed logic and a Power BI report to estimate expected fulfilment dates for open orders by integrating current stock, incoming purchase orders, and pending requisitions — enabling proactive Supply Chain decisions.", 
+                "Extracted and loaded data from multiple data sources (flat files and SQL Server) applying transformations using Power Query (M)."
             ],
             "skills": [
                 "Power BI", "DAX", "Power Query", "M", "Data Modeling", "Data Visualization", "Excel", "Data Pipelines"
