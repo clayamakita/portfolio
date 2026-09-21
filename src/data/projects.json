@@ -1,6 +1,14 @@
 {
     "projects": [
         {
+            "name": "Personal Finances Analytics",
+            "description": "A portfolio project showcasing an end-to-end analytics workflow",
+            "project-link": "",
+            "git-link": "https://github.com/clayamakita/personal_finances",
+            "technologies": [
+                "Fivetran", "BigQuery", "dbt", "SQL", "Power BI", "Storytelling"
+            ]
+        }, {
             "name": "Power BI report - Fitness Tracker App",
             "description": "Power BI report which leverages design best practices to make complex information accessible.",
             "project-link": "",
