@@ -1,8 +1,9 @@
 {
     "description": [
-        "Hi! I'm Clarissa, and I'm passionate about analytics and behavioral economics.",
-        "My expertise lies in building compelling data visualizations, writing complex SQL queries, and collaborating with other team members to ensure the quality and reliability of data and reports.",
-        "In my free time, I enjoy exploring new places around town, cooking up new dishes, and listening to podcasts (especially the ones from the Freakonomics Radio Network). Here are some of my skills and the technologies I'm most familiar with:"
+        "Hi! I'm Clarissa — a deep thinker and curious problem-solver who's passionate about analytics and making data useful.",
+        "I specialize in building data solutions that address real business needs, while collaborating closely with teammates to ensure data quality and reliability.",
+        "Outside of work, I enjoy exploring new places around town, cooking up new dishes, and playing guitar.",
+        "Here are some of my skills and the tools I'm most familiar with:"
     ],
-    "skills": ["Power BI", "DAX", "Power Query", "M", "Data Modeling", "Python", "SQL", "Excel"]
+    "skills": ["SQL", "Power BI", "DAX", "Power Query", "M", "Data Modeling", "Python", "Excel", "dbt", "Git"]
 }
